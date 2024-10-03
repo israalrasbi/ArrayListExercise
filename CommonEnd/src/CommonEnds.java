@@ -1,24 +1,23 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+
 public class CommonEnds {
     public static void main(String[] args) {
-       Scanner sc = new Scanner(System.in);
-       //define the arrays
-       ArrayList<Integer>a = readArray(sc,"first");
-       ArrayList<Integer>b = readArray(sc,"second");
-       //print the result
-       System.out.println("Does the arrays have common ends? " + commonEnd(a, b));
+        Scanner sc = new Scanner(System.in);
+        //define the arrays
+        ArrayList<Integer> a = readArray(sc, "first");
+        ArrayList<Integer> b = readArray(sc, "second");
+        //print the result
+        System.out.println("Does the arrays have common ends? " + commonEnd(a, b));
 
     }
 
     public static boolean commonEnd(ArrayList<Integer> a, ArrayList<Integer> b) {
         //define variables to take the length of both arrays
-        int aLen=a.size();
-        int bLen=b.size();
-        return a.get(0) == b.get(0) || a.get(aLen-1) == b.get(bLen-1);
+        int aLen = a.size();
+        int bLen = b.size();
+        return a.get(0) == b.get(0) || a.get(aLen - 1) == b.get(bLen - 1);
     }
 
     public static ArrayList<Integer> readArray(Scanner sc, String arrayName) {
